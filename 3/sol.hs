@@ -1,8 +1,7 @@
-import Data.List.Split
 import Data.Map
 main = do
     s <- readFile "input"
-    putStrLn $ show $ getChecksum $ Prelude.filter (\x -> length x > 0) $ splitOn "\n" s
+    putStrLn $ show $ getChecksum $ Prelude.filter (\x -> length x > 0) $ lines s
 
 getChecksum :: [String] -> Int
 getChecksum ids = doubles * triples

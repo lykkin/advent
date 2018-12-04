@@ -1,9 +1,8 @@
-import Data.List.Split
 import Data.Set
 
 main = do
     s <- readFile "input"
-    putStrLn $ show $ getRepeats (Prelude.map (\x -> read x :: Int) $ Prelude.filter (\x -> length x > 0) $ splitOn "\n" s) (empty) 0
+    putStrLn $ show $ getRepeats (Prelude.map (\x -> read x :: Int) $ Prelude.filter (\x -> length x > 0) $ lines s) (empty) 0
 
 getRepeats :: [Int] -> Set Int -> Int -> Int
 getRepeats nums seen tot 

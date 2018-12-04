@@ -1,7 +1,6 @@
-import Data.List.Split
 main = do
     s <- readFile "input"
-    putStrLn $ show $ getCommonSubstring $ Prelude.filter (\x -> length x > 0) $ splitOn "\n" s
+    putStrLn $ show $ getCommonSubstring $ Prelude.filter (\x -> length x > 0) $ lines s
 
 getCommonSubstring :: [String] -> String
 getCommonSubstring (id:ids)
